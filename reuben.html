@@ -1,0 +1,63 @@
+<html>
+	<head><title>Reuben's webpage</title></head>
+	<script>
+	var isDefault = true;
+	function showPicture() {
+		if (isDefault) { // currently showing the chest
+			// hide the sentence about clicking the chest
+			document.querySelector("p[id='chest-text']")
+				.setAttribute("style", "display: none;");
+			document.querySelector("img")
+				.setAttribute("src", "assets/img/reuben+dad.jpg");
+			isDefault = false;
+		} else { // currently not showing chest text - need to show it
+			document.querySelector("img")
+				.setAttribute("src", "assets/img/chest.jpg");
+			document.querySelector("p[id='chest-text']")
+				.setAttribute("style", "display: block;");
+			isDefault = true;
+		}
+	}
+	</script>
+	<style>
+	html {
+		background: #9b2a2a;
+		background: linear-gradient(90deg,rgba(155, 42, 42, 1) 0%, rgba(0, 0, 0, 1) 100%);		
+	}
+	body {
+		padding: 50px;
+		border: 5px dotted green;
+		size: 600px;
+		display: inline-block;
+		font-family: fantasy;
+	}
+	</style>
+	<body><h1>Reuben's page</h1>
+		<h2>Bonus</h2>
+		<p id="chest-text">Click on the chest for a surprise</p>
+		<img src="assets/img/chest.jpg" onClick=showPicture() style="height: 150px;" />
+		
+		<h2>About me</h2>
+		<p>My name is Reuben. I am 5 years old.<p/>
+		<h2>My favourite things</h2>
+		<p>Ice cream, sleeping, daddy snuggles, and mommy snuggles.</p>
+		<h2>Strengths</h2>
+		<ul>
+			<li>Funny</li>
+			<li>Smart</li>
+			<li>Kind</li>
+			<li>Brave</li>
+			<li>Strong</li>
+			<li>Loving</li>
+			<li>Considerate</li>
+			<li>Creative</li>
+			<li><b><em>Reeeeeally</em></b> kind</li>
+		</ul>
+		<marquee>What does this do!?!?!?</marquee>
+		<marquee>I lllooove this app!!</marquee>
+	</body>
+
+
+
+
+</html>
