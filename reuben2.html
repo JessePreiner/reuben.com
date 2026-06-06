@@ -1,21 +1,55 @@
 <html>
-    <head>
-        <style>
-    html {
-		background: #9b2a2a;
-		background: linear-gradient(90deg,rgba(155, 42, 42, 1) 0%, rgba(0, 0, 0, 1) 100%);		
+
+<head>
+    <style>
+        html {
+            background: #9b2a2a;
+            background: linear-gradient(90deg, rgba(155, 42, 42, 1) 0%, rgba(0, 0, 0, 1) 100%);
+        }
+        button {
+		background-color: initial;
+		border: 0;
 	}
-        </style>
-        <title>Reuben's story</title>
-    </head>
-    <body>
-        <h1>Reuben's story</h1>
-        <h2>page 1 - Dad and Reuben</h2>
-        <p>
-            My dad's name is Jesse. he is medium/huge not big.
-        </p>
-        <h2>page 2 - mom</h2>
-        <p>mom,s medium/big</p>
-        <h2>the end</h2>
-    </body>
-</html>
+	button:hover {
+		color: white;
+		background-color: red;
+	}
+    </style>
+    <title>Reuben's story</title>
+    <script>
+        function doReubensCrazyThing(e) {
+            // e.preventDefault();
+            var htmlTag = document.querySelector('html');
+            var styles = window.getComputedStyle(htmlTag);
+            var backgroundColor = styles.backgroundColor;
+            console.log(backgroundColor);
+            htmlTag.style.backgroundColor = "green";
+            setInterval(() => {
+                htmlTag.style.backgroundColor = backgroundColor;
+            });
+            /*
+            1. store current background style
+            1. turn background color green
+            2. wait 5s
+            3. turn background color the way it was
+            */
+           
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Reuben's story</h1>
+    <h2>page 1 - Dad and Reuben</h2>
+    <p>
+        My dad's name is Jesse. he is medium/huge not big.
+    </p>
+    <h2>page 2 - mom</h2>
+    <p>mom,s medium/big</p>
+    <h2>the end</h2>
+		<button onclick="window.location.href='reuben.html'">Click here to go to first page</button>
+
+    <!-- <button onclick="doReubensCrazyThing()">Click</button> -->
+</body>
+
+</html>`
