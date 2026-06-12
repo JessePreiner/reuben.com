@@ -8,16 +8,21 @@
         div.svg {
             display: none;
         }
+        p:hover {
+            display: none;
+   
+        }
     </style>
     <script>
         function togglePic() {
             var elem = document.querySelector("div.svg");
             var newStyle = elem.style.display === 'block' ? 'none' : 'block';
-            document.querySelector("div.svg").setAttribute("style", "display: " +   newStyle);
+            elem.setAttribute("style", "display: " +   newStyle);
         }
     </script>
 </head>
 <body>
+    <p>reuben3</p>
     <button onclick="togglePic()">Toggle pic</button>
     <div class="svg">
         <svg xmlns="http://www.w3.org/2000/svg" 
